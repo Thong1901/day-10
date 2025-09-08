@@ -1,11 +1,14 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var express_1 = require("express");
-var app = (0, express_1.default)();
-var PORT = 3001;
-app.get('/', function (req, res) {
+const express_1 = __importDefault(require("express"));
+const app = (0, express_1.default)();
+const PORT = 3001;
+app.get('/', (req, res) => {
     res.send('Hello World!');
 });
-app.listen(PORT, function () {
-    console.log("Server is running on port ".concat(PORT));
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
